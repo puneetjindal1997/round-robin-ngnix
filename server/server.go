@@ -42,8 +42,8 @@ func (server *Server) Run(env string) error {
 
 	// setup default routes
 	rsDefault := &route.Services{
-		Log:    log,
-		R:      r}
+		Log: log,
+		R:   r}
 	rsDefault.SetupV1Routes()
 
 	// setup all custom/user-defined route services
@@ -53,7 +53,7 @@ func (server *Server) Run(env string) error {
 
 	port, ok := os.LookupEnv("PORT")
 	if !ok {
-		port = "8080"
+		port = "8081"
 	}
 
 	// run with port from config
