@@ -1,7 +1,7 @@
 package route
 
 import (
-	"github.com/alpacahq/ribbit-backend/service"
+	"github.com/puneetjindal1997/round-robin-ngnix/service"
 
 	"github.com/gin-gonic/gin" // gin-swagger middleware
 	// swagger embed files
@@ -24,5 +24,5 @@ func (s *Services) SetupV1Routes() {
 
 	// prefixed with /v1 and protected by jwt
 	v1Router := s.R.Group("/v1")
-	service.AccountRouter(accountService, v1Router)
+	service.Router(v1Router)
 }
